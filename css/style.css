@@ -5,11 +5,10 @@
 }
 
 body { 
-    color: #535353;
     font-family: 'Open Sans', sans-serif;
-    margin: 8px;
     background-image: linear-gradient( #dadd18, #0952da);
     color:black;
+    padding-left:1.5rem;
 }
 
 h1,h2 {
@@ -17,6 +16,10 @@ h1,h2 {
     font-weight: 900;
     font-family: 'Encode Sans', sans-serif;
     font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
 }
 
 nav { 
@@ -29,7 +32,7 @@ nav {
 }
 
 h1{
-    margin-top: 3em;
+    margin-top: 1.8em;
 }
 a{
     color:rgb(235, 224, 224);
@@ -41,6 +44,8 @@ nav a {
 nav li {
     display: inline;
     margin-right: 1rem;
+    margin-left: .5rem;
+    font-size:1.3rem;
 }
 
 nav ul {
@@ -52,16 +57,23 @@ nav ul {
 
 
 nav a:hover, nav a:focus, nav a:active {
-    color: #b7a57a;
-    border-bottom: .6rem;
-    border-bottom-color: #b7a57a;
+    color: #dadd18;
+    border-bottom: .3rem;
+    border-bottom-color: #dadd18;
     border-bottom-style: solid;
 }
 
-
+.links a:hover, .links a:focus, .links a:active {
+    color: #b11670;
+    border-bottom: .1rem;
+    border-bottom-color: #dadd18;
+    border-bottom-style: solid;
+}
 #home_page {
     display: flex;
-    height:100%;
+    flex-flow: column;
+    height: 100%;
+    justify-content: space-around;
 }
 
 .flex1{
@@ -70,7 +82,7 @@ nav a:hover, nav a:focus, nav a:active {
 
 .flex2{
     flex: 1;
-    margin:10px;
+    margin:.2rem;
 }
 
 .flex3{
@@ -86,9 +98,41 @@ nav a:hover, nav a:focus, nav a:active {
     width:50%;
 }
 
+
+
 @media (min-width:770px)
 {
-   
+    #home_page {
+        flex-flow: row;
+        justify-content: space-around;  
+    }
+    
+    .flex1{
+        flex-basis: 25%;
+    }
+    
+    .flex2{
+        flex: 1;
+        margin:10px;
+    }
+    
+    .flex3{
+        flex-basis: 25%;
+        flex-shrink: 0;
+    }
+
+    .card-pics {
+        width:35vw;
+    }
+}
+
+@media (min-width:850px){
+    .card-pics {
+        width:30vw;
+    }
+}
+
+@media (min-width:990px){
     .card-pics {
         width:35vw;
     }
@@ -96,7 +140,6 @@ nav a:hover, nav a:focus, nav a:active {
 
 @media (min-width:1200px)
 {
-    
     .card-pics {
         width:50%;
     }
