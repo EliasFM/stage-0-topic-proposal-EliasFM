@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="icon"
+    type="image/png"
+    href="img/noun_Medicine_40419.png"
+    alt="Medicine by Steve Morris from the Noun Project"
+>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
     <meta name="author" content="Elias Mendel">
     <meta name="description" content="Project proposal">
     <meta name="keywords" content="Drug, Opioid, Overdose, Abuse">
@@ -12,61 +18,64 @@
 
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<header>
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="team.html">Team</a></li>
             <li><a href="#data">Data</a></li>
+            <li><a href="team.html">About</a></li>
+            
         </ul>
     </nav>
+    <h1>A Dive Into Overdoses</h1>
+</header>
+<body>
     <main>
-        <h1>Proposal for a Drug Abuse Web Application</h1>
-        <section>
-            <h2>Topic Overview</h2>
-            <p>
-                The area I want to explore with this project is drug abuse and overdoses. The issues surrounding drug abuse
-                have become mainstream with the opioid epidemic, and the realization that rather than this being a moral 
-                issue it's a social issue.  
+        <div id="home_page">
+            <section class="flex1">
+                <h2>Topic Overview</h2>
+                <p>
+                    The epidemic of drug abuse has come into the national spotlight
+                    as more and more people are dying from opioid overdoses. The numbers 
+                    involved are staggering, and as american's perspective on drugs shifts,
+                    so is the shift in what the issue is about drugs. For a long time drug use
+                    has been considered to be a personal issue, but as the opioid deaths continue
+                    to rise, theres began a realization that this is a social issue. That this 
+                    stems from a problem in our society is reflected in how different areas are 
+                    affected by this issue. 
                 </p>
-            <p>
-                This shift in mindset is fascinating and I think it'd be interesting to do 
-                an independent survey of the field of drug use, abuse, and overdosage in the midst of a changing regulation
-                landscape. The current information in the field is still fresh, and while opioids dominate headlines,
-                there are many drugs that have been overlooked. In addition the legalization of marijuana has become
-                common across North America.
-            </p>
-            <p>
-                The importance of the data being fresh is two fold, one there isn't a lot of reliable studies of the data,
-                and second the studies and visualizations are in no way guaranteed to be presenting fully valid findings. 
-                This data with new regulations is far too new to see broad impacts, however setting up the infrastructure
-                to track and see the changes would be interesting if possible.
-            </p>
-        </section>
-        <section>
-            <h2>
-                Possible Applications
-            </h2>
-            <ul>
-                <li>
-                    A possible idea is to see if in states/cities where drug regulations have changed, if 
-                    the health statistics from those locales have shifted in response. The value of this is 
-                    in future policy, if this shows that loosening or tightening regulation reduces abuse and 
-                    overdoses, then it's possible to help more people. Policy makers could look at this and 
-                    see what approaches are most useful and how long approaches take before results start being
-                    seen.
-                </li>
-                <li>
-                    Another possible idea is to create an app that shows the change in opioids sold in states
-                    with legal marijuana. This sidesteps the issue of lag time for regulation, and instead 
-                    examines one of the sources of the opioid epidemic, a population which has been prescribed 
-                    addictive painkillers as the first step rather than as an extreme step in healthcare. 
-                    This would be helpful in seeing how much legalization of marijuana can help combat
-                    the opioid epidemic.
-                </li>
-            </ul>
-        </section>
-        <section>
+            </section>
+            <section class = "flex2">
+                    <h2>
+                        The Rise of Overdoses
+                    </h2>
+                    <img id="opioid_table" src="img/opioid_overdose.jpg" alt="shows the rise of drug overdoses, with
+                    deaths from synthetic opioids leading the rise">
+            </section>
+            <section class="flex3">
+                <h2>
+                    The Goal
+                </h2>
+                <p>
+                    Hopefully these visualizations and analysis will enable both voters to 
+                    understand the depth and scope of this issue, and policy makers to see
+                    how much this affects them. If successful this could nudge people to doing
+                    right by the people suffering from an epidemic of painkiller overprescription.
+                </p>
+                <p>
+                    Another reason this has become so much more important, is that during the 
+                    presidential elections the overdose epidemic was constantly talked about
+                    and now it feels like its being glossed over. Maybe because it's an 
+                    uncomfortable topic. It also could be that there's a lot of lobbying
+                    money pouring in from the drug companies which supply painkillers,
+                    a side effect of how long they've achieved a dominance over US health
+                    care systems, based off of lies like opioids are non addictive. (an actual
+                    claim by oxycotin used in their advertising)
+                </p>
+            </section>
+            
+        </div>
+        <section id=data>
             <h2>
                 Useful Datasets and References
             </h2>
@@ -79,12 +88,14 @@
                 <li>
                     <a href="https://www.cdc.gov/drugoverdose/maps/rxrate-maps.html" target="_blank">Database of opioid prescription rates by state and county</a>
                 </li>
+                <li>
+                    <a href="https://www.drugabuse.gov/related-topics/trends-statistics/overdose-death-rates" target="_blank">Visualizes the overdose crisis</a>
+                </li>
             </ul>
         </section>
     </main>
-    <footer>
-
-    </footer>
-    
 </body>
+<footer>
+    <a href="eliasfm@uw.edu">Email Me</a>
+</footer>
 </html>

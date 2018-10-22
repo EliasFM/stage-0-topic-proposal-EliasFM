@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="icon"
+    type="image/png"
+    href="img/noun_Medicine_40419.png"
+    alt="Medicine by Steve Morris from the Noun Project"
+>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
     <meta name="author" content="Elias Mendel">
     <meta name="description" content="Group page">
     <meta name="keywords" content="Drug, Opioid, Overdose, Abuse">
@@ -12,20 +18,23 @@
 
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<header>
         <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="team.html">Team</a></li>
-                    <li><a href="#data">Data</a></li>
+                    <li><a href="index.html#data">Data</a></li>
+                    <li><a href="team.html">About</a></li>
                 </ul>
             </nav>
             <main>
 
             
-    <h1>Team Overview</h1>
+    <h1>About Us</h1>
+</header>
+<body>
+       
     <section>
-        <h2>Topic Overview</h2>
+        <h2>Why are we doing this</h2>
         <p>
             The area I want to explore with this project is drug abuse and overdoses. The issues surrounding drug abuse
             have become mainstream with the opioid epidemic, and the realization that rather than this being a moral 
@@ -46,27 +55,56 @@
     </section>
     <section>
         <h2>
-            Possible Applications
+            Who are we
         </h2>
-        <ul>
-            <li>
-                A possible idea is to see if in states/cities where drug regulations have changed, if 
-                the health statistics from those locales have shifted in response. The value of this is 
-                in future policy, if this shows that loosening or tightening regulation reduces abuse and 
-                overdoses, then it's possible to help more people. Policy makers could look at this and 
-                see what approaches are most useful and how long approaches take before results start being
-                seen.
-            </li>
-            <li>
-                Another possible idea is to create an app that shows the change in opioids sold in states
-                with legal marijuana. This sidesteps the issue of lag time for regulation, and instead 
-                examines one of the sources of the opioid epidemic, a population which has been prescribed 
-                addictive painkillers as the first step rather than as an extreme step in healthcare. 
-                This would be helpful in seeing how much legalization of marijuana can help combat
-                the opioid epidemic.
-            </li>
-        </ul>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 d-flex">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-auto">
+                                    <img class= "card-pics" src="img/elias.jpg" alt="Elias's profile image">
+                                </div>
+                                <div class="col-sm">
+                                    <h2 class="card-title">Elias Mendel</h2>
+                                    <p class="card-text">Hi! I'm an informatics students with an interest in public health, mapping, and data.
+                                        I did a data science internship over the summer where we explored the relationship between 
+                                        demographics and social issues. One of the things we explored but didn't pursue was
+                                        the relationship between demographics and opioid abuse. It's become a sensationalized topic
+                                        but political willpower feels weak with the amount of lobbying money being thrown around. So 
+                                        I hope that this will add clarity to the situation and perhaps provide some guidance to public policy.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 d-flex">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-auto">
+                                    <img class= "card-pics"  src="img/spire.jpg" alt="view of downtown london with the shard">
+                                </div>
+                                <div class="col-sm">
+                                    <h2 class="card-title">London</h2>
+                                    <p class="card-text">Despite being a country that's fairly similiar to america, despite its size.
+                                        It hasn't faced the issue of opioid overdoses that pervade america. Now it might be better policy,
+                                        better healthcare, or a difference in view of what the issue is. Rather than treating opioid usage
+                                        as fodder to fill private prisons, they provide safe injection sites, and attempt to rehabitalate people.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 </main>
 </body>
+<footer>
+        <a href="eliasfm@uw.edu">Email Me</a>
+    </footer>
 </html>
