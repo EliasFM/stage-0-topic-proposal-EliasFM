@@ -3,9 +3,6 @@
     box-sizing: border-box;
     
 }
-html{
-    scroll-behavior: smooth;
-}
 body { 
     font-family: 'Open Sans', sans-serif;
     background-image: linear-gradient( #dadd18, #0952da);
@@ -86,10 +83,6 @@ img {
     border: 1px solid black;
     border-radius: 5px;
   }
-footer{
-    position: relative;
-    bottom:0;
-}
 .flex1{
     flex-basis: 25%;
 }
@@ -122,11 +115,13 @@ footer{
 }
 html {
     min-height:100%;
+    scroll-behavior: smooth;
 }
 footer{
     position: fixed;
     bottom:0;
 }
+
 @media (min-width:790px)
 {
     #home_page {

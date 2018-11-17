@@ -6,37 +6,47 @@ let state = {
     movie:''
 }
 
-
+//initializes button for accepting input and sets up urls for OMDB access
 let container = document.querySelector('#listing');
 let detailContainer = document.querySelector('#details');
 let inp = document.querySelector('input');
 let button = document.querySelector('#add-button');
 const urlTemplate = 'http://www.omdbapi.com/?apikey=ae5cb563&r=json&type=movie&s={name}';
 const movieTemplate = 'http://www.omdbapi.com/?apikey=ae5cb563&r=json&type=movie&i={name}';
+button.addEventListener('click', event => {
+    state.search = inp.value;
+    fetchMovieList(state.search);
+    event.preventDefault();
+})
 
 function renderMovies(){
+    // creaets a card for every movie
     state.movieList = state.movieList.Search;
     state.movieList.forEach(element => {
         createMovieCard(element);
     });
 }
 function togglerSpinner(){
+    // toggles spinner for waiting
     document.querySelector('.fa-spinner').classList.toggle('d-none');
   }
 
   function renderError(err){
+      // request has an error 
     let test = document.createElement(`p`);
     test.textContent = err.message;
     document.querySelector('#listing').appendChild(test);
   }
 
   function apiError(err){
+    // api returns an error despite it going through
     let test = document.createElement(`p`);
     test.textContent = err;
     document.querySelector('#listing').appendChild(test);
   }
 
 function fetchMovieList(term){
+    // fetches a list of all movies with title
     container.innerHTML='';
     let url = urlTemplate.replace("{name}",term);
     togglerSpinner();
@@ -59,6 +69,7 @@ function fetchMovieList(term){
 }
 
 function fetchMovie(term){
+    // fetches details on a movie based off of IMDB id
     detailContainer.innerHTML='';
     let url = movieTemplate.replace("{name}",term);
     togglerSpinner();
@@ -73,16 +84,11 @@ function fetchMovie(term){
     iter.then(response => state.movie = response).then(()=>renderMovie())
 }
 
-button.addEventListener('click', event => {
-    state.search = inp.value;
-    fetchMovieList(state.search);
-    event.preventDefault();
-})
-
 
 
 
 function createMovieCard(movieObj){
+    // creates a card with movie poster and title from movie list
     let card = document.createElement('div');
     card.classList.add("card");
     let inCard = document.createElement('div');
@@ -103,6 +109,7 @@ function createMovieCard(movieObj){
     cardRow.appendChild(cardCol);
     cardCol.appendChild(cardTitle);
 
+    //creates loading while waiting for image load
     var image = cardImg;
     var downloadingImage = new Image();
     downloadingImage.onload = function(){
@@ -116,6 +123,7 @@ function createMovieCard(movieObj){
     cardTitle.textContent = movieObj.Title;
     card.setAttribute('data-id',movieObj.imdbID);
     card.addEventListener('click', function() {
+        //allows card to be selected for more detailed information
         fetchMovie(this.getAttribute('data-id'));
     })
 }
@@ -123,6 +131,7 @@ function createMovieCard(movieObj){
 
 
 function renderMovie(){
+    // creates card for movie details of currently selected card
     let card = document.createElement('div');
     card.classList.add("card");
     let inCard = document.createElement('div');
