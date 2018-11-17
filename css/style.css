@@ -3,7 +3,9 @@
     box-sizing: border-box;
     
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body { 
     font-family: 'Open Sans', sans-serif;
     background-image: linear-gradient( #dadd18, #0952da);
@@ -69,19 +71,31 @@ nav a:hover, nav a:focus, nav a:active {
     border-bottom-color: #dadd18;
     border-bottom-style: solid;
 }
+
+
 #home_page {
     display: flex;
     flex-flow: column;
     height: 100%;
     justify-content: space-around;
 }
-
+img {
+    width: 50px;
+    height: 300px;
+    background: url(ajax-loader.gif) 50% no-repeat;
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+footer{
+    position: relative;
+    bottom:0;
+}
 .flex1{
     flex-basis: 25%;
 }
 
 .flex2{
-    flex: 1;
+    flex-basis: 50%;
     margin:.2rem;
 }
 
@@ -98,9 +112,22 @@ nav a:hover, nav a:focus, nav a:active {
     width:50%;
 }
 
+.card-text {
+    white-space: pre-line;
+}
 
-
-@media (min-width:770px)
+.card-columns{
+    column-count:1;
+    display: inline-block
+}
+html {
+    min-height:100%;
+}
+footer{
+    position: fixed;
+    bottom:0;
+}
+@media (min-width:790px)
 {
     #home_page {
         flex-flow: row;
@@ -118,24 +145,26 @@ nav a:hover, nav a:focus, nav a:active {
     
     .flex3{
         flex-basis: 25%;
-        flex-shrink: 0;
     }
 
     .card-pics {
         width:35vw;
     }
+    
 }
 
 @media (min-width:850px){
     .card-pics {
         width:30vw;
     }
+    
 }
 
 @media (min-width:990px){
     .card-pics {
         width:35vw;
     }
+    
 }
 
 @media (min-width:1200px)
@@ -143,4 +172,5 @@ nav a:hover, nav a:focus, nav a:active {
     .card-pics {
         width:50%;
     }
+    
 }

@@ -13,90 +13,72 @@
     crossorigin="anonymous">
     <meta name="author" content="Elias Mendel">
     <meta name="description" content="Project proposal">
-    <meta name="keywords" content="Drug, Opioid, Overdose, Abuse">
-    <title>Drug Abuse</title>
+    <meta name="keywords" content="Movies">
+    <title>Movies</title>
     <link rel="stylesheet" href="css/style.css">
+    
 </head>
 
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#data">Data</a></li>
+                <li><a href="index.html">Movie</a></li>
                 <li><a href="team.html">About</a></li>
-                
+                <li><a href="#data">Source</a></li>
             </ul>
         </nav>
-        <h1>A Dive Into Overdoses</h1>
+        <h1>Movie Finder</h1>
     </header>
     <main>
         <div id="home_page">
             <section class="flex1">
-                <h2>Topic Overview</h2>
-                <p>
-                    The epidemic of drug abuse has come into the national spotlight
-                    as more and more people are dying from opioid overdoses. The numbers 
-                    involved are staggering, and as american's perspective on drugs shifts,
-                    so is the shift in what the issue is about drugs. For a long time drug use
-                    has been considered to be a personal issue, but as the opioid deaths continue
-                    to rise, theres began a realization that this is a social issue. That this 
-                    stems from a problem in our society is reflected in how different areas are 
-                    affected by this issue. 
-                </p>
+                <h2>Movie Search</h2>
+                <form role="form">
+                        <div id="movie-input" class="form-group">
+                          <div class="input-group">
+                            <input type="text" placeholder="  Movie Name">
+                          </div>
+                        </div>
+                        <button type="button" id="add-button" class="btn btn-primary">Search for movies</button>
+                      </form>
             </section>
             <section class="flex2">
                 <h2>
-                    The Rise of Overdoses
+                    Movie List 
                 </h2>
-                <img id="opioid_table" src="img/opioid_overdose.jpg" alt="shows the rise of drug overdoses, with
-                deaths from synthetic opioids leading the rise">
+                <div class="container">
+                    <div class="card-columns" id="listing">
+                     </div>       
+                </div>
             </section>
             <section class="flex3">
                 <h2>
-                    The Goal
+                    Selected Movie Information
                 </h2>
-                <p>
-                    Hopefully these visualizations and analysis will enable both voters to 
-                    understand the depth and scope of this issue, and policy makers to see
-                    how much this affects them. If successful this could nudge people to doing
-                    right by the people suffering from an epidemic of painkiller overprescription.
-                </p>
-                <p>
-                    Another reason this has become so much more important, is that during the 
-                    presidential elections the overdose epidemic was constantly talked about
-                    and now it feels like its being glossed over. Maybe because it's an 
-                    uncomfortable topic. It also could be that there's a lot of lobbying
-                    money pouring in from the drug companies which supply painkillers,
-                    a side effect of how long they've achieved a dominance over US health
-                    care systems, based off of lies like opioids are non addictive. (an actual
-                    claim by oxycotin used in their advertising)
-                </p>
+                <i class="d-none fa fa-spinner fa-spin" aria-hidden="true"></i>
+                <div class="container">
+                    <div class="card-columns" id="details">   
+                    </div>   
+                </div>
             </section>
             
         </div>
         <section id="data">
             <h2>
-                Useful Datasets and References
+                
             </h2>
-            <ul class="links">
-                <li><a href="https://www.cdc.gov/nchs/nvss/vsrr/drug-overdose-data.htm" target="_blank">Drug overdose data from the Vital Statistic Reports</a>
-                </li>
-                <li>
-                    <a href="https://data.world/sya/marijuana-laws-by-state" target="_blank">Database of marijuana laws by state</a>
-                </li>
-                <li>
-                    <a href="https://www.cdc.gov/drugoverdose/maps/rxrate-maps.html" target="_blank">Database of opioid prescription rates by state and county</a>
-                </li>
-                <li>
-                    <a href="https://www.drugabuse.gov/related-topics/trends-statistics/overdose-death-rates" target="_blank">Visualizes the overdose crisis</a>
-                </li>
-            </ul>
+        
         </section>
     </main>
+    <br>
+    <br>
     <footer class="links">
-        <a href="eliasfm@uw.edu">Email Me</a>
+        <a href='http://omdbapi.com/'>All Data From OMDB</a>
+        <br>
+        <a href="mailto:eliasfm@uw.edu">Email Me</a>
         <p>Copyright &copy; 2018 Elias Mendel</p>
     </footer>
+    <script src='js/movie.js'></script>
 </body>
 </html>
