@@ -11,8 +11,8 @@ let container = document.querySelector('#listing');
 let detailContainer = document.querySelector('#details');
 let inp = document.querySelector('input');
 let button = document.querySelector('#add-button');
-const urlTemplate = 'http://www.omdbapi.com/?apikey=ae5cb563&r=json&type=movie&s={name}';
-const movieTemplate = 'http://www.omdbapi.com/?apikey=ae5cb563&r=json&type=movie&i={name}';
+const urlTemplate = 'https://www.omdbapi.com/?apikey=ae5cb563&r=json&type=movie&s={name}';
+const movieTemplate = 'https://www.omdbapi.com/?apikey=ae5cb563&r=json&type=movie&i={name}';
 button.addEventListener('click', event => {
     state.search = inp.value;
     fetchMovieList(state.search);
