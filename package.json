@@ -1,39 +1,35 @@
 {
-  "name": "info340-project",
-  "version": "1.0.0",
+  "homepage": "https://info340-au18.github.io/stage-0-topic-proposal-EliasFM/",
+  "name": "stage-0-topic-proposal-eliasfm",
+  "version": "0.1.0",
   "private": true,
-  "description": "",
-  "scripts": {
-    "test": "jest"
+  "dependencies": {
+    "@types/react-bootstrap": "^0.32.14",
+    "bootstrap": "^4.1.3",
+    "gh-pages": "^2.0.1",
+    "react": "^16.6.3",
+    "react-a11y": "^1.1.0",
+    "react-bootstrap": "^0.32.4",
+    "react-dom": "^16.6.3",
+    "react-scripts": "2.1.1",
+    "reactstrap": "^6.5.0",
+    "whatwg-fetch": "^3.0.0"
   },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "jest-style-matchers": "^0.1.1"
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "parserOptions": {
-      "ecmaVersion": 6
-    },
-    "env": {
-      "browser": true,
-      "node": true,
-      "shared-node-browser": true,
-      "jquery": true
-    },
-    "extends": "eslint:recommended",
-    "rules": {
-      "no-console": "off",
-      "semi": [
-        "off",
-        "always",
-        {
-          "omitLastInOneLineBlock": true
-        }
-      ],
-      "camelcase": [
-        "error"
-      ]
-    }
-  }
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
