@@ -34,7 +34,7 @@ export class NavBar extends Component {
             <div className="nav-title">Movie Browser</div>
           </div>
   
-          <div className="nav-btn">
+          {/* <div className="nav-btn">
             <label className="nav-check" for="click to show contents of navabar">
               <span></span>
               <span></span>
@@ -48,7 +48,7 @@ export class NavBar extends Component {
             <a href="#" aria-label='click to get to home page'>Home</a>
             <a href="#" aria-label='click to know about us'>About Us</a>
             <a href="#" araa-label='click to contact us'>Contact Us</a>
-          </div>
+          </div> */}
   
         </div>
       );
