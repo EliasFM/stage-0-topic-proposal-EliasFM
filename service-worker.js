@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/stage-0-topic-proposal-EliasFM/precache-manifest.36cbb77da0283c8296b9fe6216e3bd91.js"
+  "/stage-0-topic-proposal-EliasFM/precache-manifest.966bd59a796ff57e5b58a65bc8e13814.js"
 );
 
 workbox.clientsClaim();
